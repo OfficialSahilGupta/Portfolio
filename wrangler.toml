@@ -1,0 +1,20 @@
+name = "sahil-portfolio"
+type = "javascript"
+account_id = ""
+workers_dev = true
+route = ""
+zone_id = ""
+
+[env.production]
+name = "sahil-portfolio-prod"
+route = "sahilgupta8.com.np/*"
+zone_id = ""
+
+[build]
+command = "npm run build"
+cwd = "./"
+watch_paths = ["src/**/*.tsx", "src/**/*.ts", "src/**/*.css"]
+
+[build.upload]
+format = "service-worker"
+main = "./build/index.html"
